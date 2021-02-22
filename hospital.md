@@ -1,6 +1,6 @@
 # Hospital coding challenge
 
-We would like to ask you to do a fun coding exercise to have a deeper understanding of your coding skills. Imagine that your code will be read and modified by other developers, so they should be able to understand it easily. You should also remember that code should be easily extensible and maintainable, but at the same time beware of overly complicated solutions and speculative design (we value a lot the KISS principle ;-)).
+We would like to ask you to do a fun coding exercise to have a deeper understanding of your coding skills. Imagine that your code will be read and modified by other developers, so they should be able to understand it easily. You should also remember that code should be easily extensible, maintainable, and scalable but at the same time beware of overly complicated solutions.
 
 Last but not least: there is no single best solution, so we encourage you to design and implement the solution in a way you think is right.
 
@@ -76,8 +76,8 @@ A basic skeleton in TypeScript is provided in the *hospital-lib* folder. You **m
 
 To run the tests, run the following commands in the *hospital-lib* folder:
 
- - *yarn install*
- - *yarn test* - to run the basic predefined tests
+ - `yarn install`
+ - `yarn test` - to run the basic predefined tests
 
 ## Part 2. Creating the UI *(hospital-fe)*
 
@@ -97,12 +97,12 @@ The hospital owns a small server (*hospital-be* – we provide it) that stores t
 
 Your frontend solution must be stored in the *hospital-fe* folder and must be written in VueJS or AngularX ***if nothing was explicitly defined.***
 
-**Once your frontend is bootstrapped**, in order to use hospital-lib in your frontend, you should execute the in the *hospital-lib* folder:
-  - yarn build:prod
-  - yarn link
+**Once your frontend is bootstrapped**, in order to use *hospital-lib* in your frontend, you should execute the in the *hospital-lib* folder:
+  - `yarn build:prod`
+  - `yarn link`
 
 Then in the package.json of your project in the folder *hospital-fe*, you should add in the dependencies *"hospital-lib": "1.0.0"*, and then execute the command:
-  - yarn link hospital-lib
+  - `yarn link hospital-lib`
   
 Now, in your source files, you can use the *hospital-lib* using:
 
@@ -112,8 +112,8 @@ Now, in your source files, you can use the *hospital-lib* using:
 
 To run the server, execute the following commands in the hospital-be folder:
 
-  - yarn install
-  - yarn start
+  - `yarn install`
+  - `yarn start`
 
 The server is then accessible through the url http://localhost:7200. It provides two endpoints (the formats follow the ones given in the test file of the library implemented in part 1):
 
