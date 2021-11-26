@@ -1,0 +1,13 @@
+.mode-options {
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10rem;
+  }
+
+  &__fetch-options {
+    display: flex;
+    flex: 0.3;
+  }
+}

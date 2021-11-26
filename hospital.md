@@ -36,7 +36,7 @@ Drugs effects are described by the following rules:
   - Aspirin cures Fever;
   - Antibiotic cures Tuberculosis;
   - A sick patient not receiving the right medicines remains sick, if not explicitly mentioned otherwise;
-  - Insulin prevents diabetic subject from dying, does not cure Diabetes;
+  - Insulin prevents diabetic subject from dying, does not cure Diabetes;x
   - If insulin is mixed with antibiotic, healthy people catch Fever;
   - Paracetamol cures Fever;
   - Paracetamol kills subject if mixed with aspirin.
