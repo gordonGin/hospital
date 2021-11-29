@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Observable, of} from "rxjs";
 
 @Component({
   selector: 'app-gallery',
@@ -10,7 +11,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class GalleryComponent implements OnInit {
 
   constructor() { }
-  @Input() medicalConditions: any[] = [];
+  @Input() medicalConditions: Observable<any[]> = of ([]);
 
   ngOnInit(): void {
   }

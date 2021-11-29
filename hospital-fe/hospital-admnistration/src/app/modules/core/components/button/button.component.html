@@ -1,1 +1,1 @@
-<button [disabled]="isDisabled" (click)="handleClick()" [class.button--disabled]=true class="button">{{title}}</button>
+<button [disabled]="isDisabled" (click)="handleClick()" [ngClass]="{'button--disabled': isDisabled }" class="button">{{title}}</button>

@@ -1,8 +1,14 @@
 .gallery {
   &__container {
     display: flex;
+    flex: 0.5;
     border: 1px solid red;
-    width: 60%;
     flex-wrap: wrap;
+  }
+
+  &__no-patients {
+    font-size: 1rem;
+    margin: 2rem;
+    font-weight: lighter;
   }
 }

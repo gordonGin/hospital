@@ -1,16 +1,16 @@
 $color: #0cf;
 
  .button {
+   min-width: 15rem;
    align-items: center;
    margin: 2rem;
-   background-color: #fff;
+   background-color: #04a40c;
    border-radius: 12px;
    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
    box-sizing: border-box;
    color: #121212;
    cursor: pointer;
    display: inline-flex;
-   flex: 1 1 auto;
    font-family: Inter,sans-serif;
    font-size: 1.2rem;
    font-weight: 700;
@@ -27,6 +27,12 @@ $color: #0cf;
    -webkit-user-select: none;
    touch-action: manipulation;
 
+   &--disabled {
+     background-color: #a63939;
+     cursor: unset;
+   }
+
    &:hover {
      box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
-   } }
+   }
+ }

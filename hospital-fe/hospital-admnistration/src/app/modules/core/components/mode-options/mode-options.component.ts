@@ -10,7 +10,7 @@ export class ModeOptionsComponent implements OnInit {
   fetchPatientsButtonText = 'Fetch Patients';
   doDrugsButtonText = 'Do Drugs';
 
-  @Input() hasPatients: boolean = false;
+  @Input() isDrugsAdministratedButtonDisabled: boolean = false;
   @Output() handleFetchPatientsClick = new EventEmitter();
   @Output() handleAdministrateDrugsClick = new EventEmitter();
 

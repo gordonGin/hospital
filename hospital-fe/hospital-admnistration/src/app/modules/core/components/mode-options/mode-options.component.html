@@ -1,4 +1,4 @@
 <div class="mode-options__container">
-    <app-button [isDisabled]="hasPatients" [title]="fetchPatientsButtonText" (handleClickEvent)="handlePatientsClick()"></app-button>
-    <app-button [isDisabled]="hasPatients" [title]="doDrugsButtonText" (handleClickEvent)="handleDrugsAdministration()"></app-button>
+    <app-button [title]="fetchPatientsButtonText" (handleClickEvent)="handlePatientsClick()"></app-button>
+    <app-button [isDisabled]="isDrugsAdministratedButtonDisabled" [title]="doDrugsButtonText" (handleClickEvent)="handleDrugsAdministration()"></app-button>
 </div>

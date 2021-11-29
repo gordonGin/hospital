@@ -1,5 +1,11 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
+import Patients from "../../interfaces/interfaces/Patients";
+import {
+    map,
+} from "rxjs/operators";
+import mapPatientsToEntity from "../../interfaces/mappers/PatientsMapper";
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +15,9 @@ export class PatientsService {
   private PATIENTS_ENDPOINT = "http://localhost:7200/patients"
   constructor(private httpClient: HttpClient) { }
 
-  public getPatients (): any {
-    return this.httpClient.get(this.PATIENTS_ENDPOINT);
+  public getPatients (): Observable<Patients> {
+    return this.httpClient.get<string>(this.PATIENTS_ENDPOINT).pipe(
+        map((patients) => mapPatientsToEntity(patients))
+    );
   }
 }

@@ -1,2 +1,11 @@
-<app-mode-options (handleFetchPatientsClick)="handlePatientsClick()" (handleAdministrateDrugsClick)="handleAdministrateDrugsToPatients()"></app-mode-options>
-<app-gallery *ngIf="medicalConditions.length > 0" [medicalConditions]="medicalConditions"></app-gallery>
+<app-mode-options (handleFetchPatientsClick)="handlePatientsClick()" (handleAdministrateDrugsClick)="handleAdministrateDrugsToPatients()" [isDrugsAdministratedButtonDisabled]="isDrugsAdministratedButtonDisabled"></app-mode-options>
+<div>
+    <div>drugs Applied</div>
+    <div>
+        {{drugs.toString()}}
+    </div>
+</div>
+
+<app-gallery [medicalConditions]="medicalConditions"></app-gallery>
+<app-history></app-history>
+

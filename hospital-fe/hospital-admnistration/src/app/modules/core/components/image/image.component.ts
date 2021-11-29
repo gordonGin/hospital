@@ -16,7 +16,7 @@ export class ImageComponent implements OnInit {
   @Input() medicalCondition: string = '';
   constructor() { }
   getImage(medicalCondition: string): any {
-    return `../../assets/images/diabetes.jpg`
+    return `../../assets/images/tuberculosis.jpg`
   }
   ngOnInit(): void {
   }

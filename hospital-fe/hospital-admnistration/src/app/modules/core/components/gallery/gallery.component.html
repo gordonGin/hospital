@@ -1,4 +1,14 @@
-<div class="gallery__container">
-    <app-tile *ngFor="let medicalCondition of medicalConditions" [medicalCondition]="medicalCondition"></app-tile>
+<app-heading [class]="'gallery-heading'" [text]="'Gallery'"></app-heading>
+<ng-container *ngIf="medicalConditions | async as mc">
+    <div *ngIf="mc.length === 0; else hasPatients">
+        <div class="gallery__no-patients">Please fetch Patients</div>
+    </div>
+    <ng-template #hasPatients>
+        <div class="gallery__container">
+            <app-tile *ngFor="let medicalCondition of mc" [medicalCondition]="medicalCondition"></app-tile>
+        </div>
+    </ng-template>
+</ng-container>
 
-</div>
+
+

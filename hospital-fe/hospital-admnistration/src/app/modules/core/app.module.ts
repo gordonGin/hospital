@@ -10,6 +10,9 @@ import {HttpClientModule} from "@angular/common/http";
 import { HomeComponent } from './components/home/home.component';
 import { MapMedicalConditionPipe } from './map-medical-condition.pipe';
 import { ImageComponent } from './components/image/image.component';
+import { HistoryComponent } from './components/history/history.component';
+import { HeadingComponent } from './components/heading/heading.component';
+import { CommonModule } from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -20,9 +23,12 @@ import { ImageComponent } from './components/image/image.component';
     ModeOptionsComponent,
     HomeComponent,
     MapMedicalConditionPipe,
-    ImageComponent
+    ImageComponent,
+    HistoryComponent,
+    HeadingComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     HttpClientModule,
   ],
