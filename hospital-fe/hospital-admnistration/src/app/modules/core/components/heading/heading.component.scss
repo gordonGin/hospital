@@ -1,5 +1,8 @@
+@import "src/app/modules/core/sass/mixins";
 .gallery-heading {
-  margin: 2rem;
-  font-weight: bold;
-  font-size: 2rem;
+  @include heading1;
+}
+
+.patients-history-heading {
+  @include heading1;
 }

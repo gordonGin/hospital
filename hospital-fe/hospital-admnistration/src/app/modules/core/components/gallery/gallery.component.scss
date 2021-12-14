@@ -1,9 +1,10 @@
+@import 'src/styles';
 .gallery {
   &__container {
     display: flex;
-    flex: 0.5;
-    border: 1px solid red;
-    flex-wrap: wrap;
+    flex-direction: column;
+    border: 1px solid black;
+    justify-content: flex-start;
   }
 
   &__no-patients {
@@ -11,4 +12,22 @@
     margin: 2rem;
     font-weight: lighter;
   }
+
+  &__headers {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin: 2rem;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  &__medical-conditions {
+    margin-right: 2rem;
+  }
 }
+
+.tile--even {
+  background-color: $gray-medium;
+}
+

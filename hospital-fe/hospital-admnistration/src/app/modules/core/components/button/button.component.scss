@@ -1,14 +1,14 @@
-$color: #0cf;
+@import "src/styles";
 
- .button {
+.button {
    min-width: 15rem;
    align-items: center;
    margin: 2rem;
-   background-color: #04a40c;
+   background-color: $enabled-button-green;
    border-radius: 12px;
    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
    box-sizing: border-box;
-   color: #121212;
+   color: black;
    cursor: pointer;
    display: inline-flex;
    font-family: Inter,sans-serif;
@@ -23,12 +23,10 @@ $color: #0cf;
    transition: box-shadow .2s,-webkit-box-shadow .2s;
    white-space: nowrap;
    border: 0;
-   user-select: none;
    -webkit-user-select: none;
-   touch-action: manipulation;
 
    &--disabled {
-     background-color: #a63939;
+     background-color: $disabled-button-red;
      cursor: unset;
    }
 

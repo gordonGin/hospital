@@ -1,14 +1,23 @@
-<app-heading [class]="'gallery-heading'" [text]="'Gallery'"></app-heading>
-<ng-container *ngIf="medicalConditions | async as mc">
-    <div *ngIf="mc.length === 0; else hasPatients">
-        <div class="gallery__no-patients">Please fetch Patients</div>
+    <div >
+        <app-heading [class]="'gallery-heading'" [text]="'Gallery'"></app-heading>
+        <ng-container *ngIf="medicalConditions">
+            <div *ngIf="medicalConditions.length === 0; else hasPatients">
+                <div class="gallery__no-patients">Please fetch Patients</div>
+            </div>
+            <ng-template #hasPatients>
+                <div class="gallery__headers">
+                    <div class="gallery__medical-conditions"><label>Medical Condition</label></div>
+                    <div><label>Number of Patients</label></div>
+
+                </div>
+                <div class="gallery__container">
+                    <app-tile *ngFor="let medicalCondition of medicalConditions; let i=index" [medicalCondition]="medicalCondition" [class.tile--even]="i % 2 === 0"></app-tile>
+                </div>
+            </ng-template>
+        </ng-container>
     </div>
-    <ng-template #hasPatients>
-        <div class="gallery__container">
-            <app-tile *ngFor="let medicalCondition of mc" [medicalCondition]="medicalCondition"></app-tile>
-        </div>
-    </ng-template>
-</ng-container>
+
+
 
 
 

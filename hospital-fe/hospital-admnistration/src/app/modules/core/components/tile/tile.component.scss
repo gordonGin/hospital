@@ -2,24 +2,33 @@
   &__container {
     font-size: 1rem;
     font-weight: lighter;
-    margin: 1rem 2rem;
-    display: flex;
-    flex-direction: row;
-    width: 15rem;
-    flex: 1;
-    background-color: grey;
-  }
-
-  &__information-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex: 1
-
-  }
-
-  &__counter {
+    padding: 1rem 2rem;
     display: flex;
     flex-direction: row;
     flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+
+
+  &__headings {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+  }
+
+  &__medical-conditions {
+    width: 10rem;
+  }
+
+  &__patients-number {
+    width: 10rem;
+    padding-left: 1rem;
+  }
+  &--even {
+    background-color: #00ccff;
   }
 }
+

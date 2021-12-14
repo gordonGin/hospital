@@ -11,7 +11,7 @@ import {Observable, of} from "rxjs";
 export class GalleryComponent implements OnInit {
 
   constructor() { }
-  @Input() medicalConditions: Observable<any[]> = of ([]);
+  @Input() medicalConditions: any;
 
   ngOnInit(): void {
   }

@@ -9,10 +9,13 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 export class ModeOptionsComponent implements OnInit {
   fetchPatientsButtonText = 'Fetch Patients';
   doDrugsButtonText = 'Do Drugs';
+  resetButtonText = 'Reset';
 
   @Input() isDrugsAdministratedButtonDisabled: boolean = false;
   @Output() handleFetchPatientsClick = new EventEmitter();
   @Output() handleAdministrateDrugsClick = new EventEmitter();
+  @Output() handleResetClick = new EventEmitter();
+
 
   handlePatientsClick() {
     this.handleFetchPatientsClick.emit();
@@ -22,6 +25,9 @@ export class ModeOptionsComponent implements OnInit {
     this.handleAdministrateDrugsClick.emit();
   }
 
+  handleReset () {
+    this.handleResetClick.emit();
+  }
   constructor() { }
 
   ngOnInit(): void {

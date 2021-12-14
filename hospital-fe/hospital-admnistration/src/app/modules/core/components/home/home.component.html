@@ -1,11 +1,16 @@
-<app-mode-options (handleFetchPatientsClick)="handlePatientsClick()" (handleAdministrateDrugsClick)="handleAdministrateDrugsToPatients()" [isDrugsAdministratedButtonDisabled]="isDrugsAdministratedButtonDisabled"></app-mode-options>
-<div>
-    <div>drugs Applied</div>
-    <div>
-        {{drugs.toString()}}
+<app-mode-options (handleResetClick)="handleReset()" (handleFetchPatientsClick)="handlePatientsClick()" (handleAdministrateDrugsClick)="handleAdministrateDrugsToPatients()" [isDrugsAdministratedButtonDisabled]="isDrugsAdministratedButtonDisabled"></app-mode-options>
+<!--<div>-->
+<!--    <div>Drugs to be applied</div>-->
+<!--    <div>-->
+<!--        {{drugs | json}}-->
+<!--    </div>-->
+<!--</div>-->
+<div class="wrapper">
+    <div style="width: 50%">
+        <app-gallery [medicalConditions]="medicalConditions"></app-gallery>
+    </div>
+    <div style="width: 50%">
+        <app-history [history]="history"></app-history>
     </div>
 </div>
-
-<app-gallery [medicalConditions]="medicalConditions"></app-gallery>
-<app-history></app-history>
 

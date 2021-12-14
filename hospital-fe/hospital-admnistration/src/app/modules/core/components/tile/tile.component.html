@@ -1,7 +1,5 @@
 <div class="tile__container">
-    <app-image></app-image>
-    <div class="tile__counter">
-    <div>{{medicalCondition.medicalCondition | mapMedicalCondition}}</div>
-    <div>{{medicalCondition.numberOfPatients}}</div>
-    </div>
+        <div class="tile__medical-conditions"><span>{{medicalCondition.medicalCondition | mapMedicalCondition}}</span></div>
+        <div class="tile__patients-number"><span>{{medicalCondition.numberOfPatients}}</span></div>
 </div>
+
