@@ -13,6 +13,8 @@ import { ImageComponent } from './components/image/image.component';
 import { HistoryComponent } from './components/history/history.component';
 import { HeadingComponent } from './components/heading/heading.component';
 import { CommonModule } from "@angular/common";
+import { TableComponent } from './components/table/table.component';
+import { MapMedicationPipe } from './map-medication.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { CommonModule } from "@angular/common";
     MapMedicalConditionPipe,
     ImageComponent,
     HistoryComponent,
-    HeadingComponent
+    HeadingComponent,
+    TableComponent,
+    MapMedicationPipe
   ],
   imports: [
     CommonModule,

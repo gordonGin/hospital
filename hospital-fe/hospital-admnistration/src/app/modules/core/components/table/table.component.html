@@ -1,0 +1,11 @@
+<div class="table__container">
+    <div class="table__headers-wrapper">
+        <div class="table__headers-element" *ngFor="let header of headers">{{header}}</div>
+    </div>
+    <div *ngFor="let data of rowData; let i=index" >
+        <div class="table__row" [class.table__row--even]="i % 2 === 0">
+          <div class="table__row-element">{{data.medicalCondition | mapMedicalCondition}}</div>
+          <div>{{data.numberOfPatients}}</div>
+        </div>
+    </div>
+</div>

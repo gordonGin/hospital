@@ -8,10 +8,10 @@ import {Component, Input, OnInit} from '@angular/core';
 export class HistoryComponent implements OnInit {
 
   @Input() history: any[] = [];
+  historyTableHeaders = ['Medical Condition', 'Patients Number'];
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

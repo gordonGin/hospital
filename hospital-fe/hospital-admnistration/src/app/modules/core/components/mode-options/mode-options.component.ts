@@ -8,7 +8,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class ModeOptionsComponent implements OnInit {
   fetchPatientsButtonText = 'Fetch Patients';
-  doDrugsButtonText = 'Do Drugs';
+  giveMedicationButtonText = 'Give Medication';
   resetButtonText = 'Reset';
 
   @Input() isDrugsAdministratedButtonDisabled: boolean = false;

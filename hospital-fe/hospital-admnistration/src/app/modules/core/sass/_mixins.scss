@@ -1,9 +1,16 @@
-@mixin heading1 {
+@mixin primary-heading {
   margin: 2rem;
   font-weight: bold;
   font-size: 2rem;
+  text-decoration: underline;
 }
 
-@mixin button {
+@mixin secondary-heading {
+  margin: 2rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
 
+@mixin line1 {
+  border-bottom: 0.1rem solid $pink;
 }

@@ -1,26 +1,31 @@
+@import 'src/styles';
+
 .history {
-  &__container {
+  &__table-container {
+    width: 100%
+  }
+
+  &__secondary-header-wrapper {
     display: grid;
-    width: 100%;
-    grid-template-columns: repeat(3, 20rem);
-    grid-column-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  &__info-wrapper {
-    display: flex;
-    flex-direction: column;
+  &__table {
+    @include line1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
   }
 
-  &__info-display {
-    display: flex;
-    flex-direction: row;
-  }
-
-  &__label {
-    display: flex;
-    flex: 0.8;
+  &__medication {
+    padding: 0 2rem;
     font-size: 1rem;
-    font-weight: bold;
+
+    &--comma:not(:empty):not(:last-child):after {
+      content: ", ";
+    }
   }
 
 }

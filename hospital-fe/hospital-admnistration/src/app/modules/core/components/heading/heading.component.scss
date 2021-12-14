@@ -1,8 +1,13 @@
 @import "src/app/modules/core/sass/mixins";
+
 .gallery-heading {
-  @include heading1;
+  @include primary-heading;
 }
 
 .patients-history-heading {
-  @include heading1;
+  @include primary-heading;
+}
+
+.secondary-heading {
+  @include secondary-heading
 }

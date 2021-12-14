@@ -10,8 +10,10 @@ import {Observable, of} from "rxjs";
 
 export class GalleryComponent implements OnInit {
 
-  constructor() { }
   @Input() medicalConditions: any;
+  @Input() headers = ['Medical Condition', 'Patients Number'] as string[];
+
+  constructor() { }
 
   ngOnInit(): void {
   }

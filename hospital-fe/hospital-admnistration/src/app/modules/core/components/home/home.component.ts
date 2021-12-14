@@ -23,25 +23,29 @@ export class HomeComponent {
       this.facadeService.getPatients().subscribe(
           (patients: Patients) => {
               this.quarantine = new Quarantine(patients);
-
               this.medicalConditions = mapReportedPatientsToEntity(this.quarantine.report());
           }
       );
   };
 
   handleAdministrateDrugsToPatients() {
+      const getHistory = (): any => {
+        if (this.history.length === 10) {
+            this.history.pop();
+            const updatedHistory = this.history;
+            return [{input: inputMedicalConditions, output: this.medicalConditions, drugs: this.drugs, medicationDate: new Date()}, ...updatedHistory];
+        }
+        return [{input: inputMedicalConditions, output: this.medicalConditions, drugs: this.drugs,  medicationDate: new Date()}, ...this.history]
+      }
       this.isDrugsAdministratedButtonDisabled = true;
-      const inputMedicalConditions = {...this.medicalConditions}
+      const inputMedicalConditions = [...this.medicalConditions]
       this.facadeService.getDrugs().subscribe((drugs) => {
           this.quarantine.setDrugs(drugs)
           this.drugs = drugs;
           this.quarantine.wait40Days();
           this.medicalConditions = mapReportedPatientsToEntity(this.quarantine.report());
-          this.history = [...this.history, {input: inputMedicalConditions, output: this.medicalConditions, drugs: this.drugs}]
-          debugger;
+          this.history = getHistory();
       });
-
-
   };
 
   handleReset() {
