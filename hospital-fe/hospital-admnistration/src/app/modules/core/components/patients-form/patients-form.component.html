@@ -1,0 +1,34 @@
+<form [formGroup]="patientsForm">
+    <div class="patients-form__container">
+        <div class="patients-form__patients-wrapper">
+            <div class="patients-form__medical-condition-wrapper">
+                <label class="patients-form__label" for="Fever">Fever</label>
+                <input class="patients-form__input" id="Fever" min="0" type="number" formControlName="F">
+            </div>
+            <div class="patients-form__medical-condition-wrapper">
+                <label class="patients-form__label" for="healthy">Healthy</label>
+                <input class="patients-form__input" id="healthy" min="0" type="number" formControlName="H">
+            </div>
+            <div class="patients-form__medical-condition-wrapper">
+                <label class="patients-form__label" for="diabetes">Diabetes</label>
+                <input class="patients-form__input" id="diabetes" min="0" type="number" formControlName="D">
+            </div>
+           <div class="patients-form__medical-condition-wrapper">
+               <label class="patients-form__label" for="tuberculosis">Tuberculosis</label>
+               <input class="patients-form__input" id="tuberculosis" min="0" type="number" formControlName="T">
+           </div>
+            <div class="patients-form__medical-condition-wrapper">
+                <label class="patients-form__label" for="dead">Dead</label>
+                <input class="patients-form__input" id="dead" min="0" type="number" formControlName="X">
+            </div>
+        </div>
+        <div class="patients-form__medication-wrapper" >
+            <label class="patients-form__label">Medication</label>
+            <select formControlName="medication">
+                <option disabled>Select Medication</option>
+                <option *ngFor="let medication of medications">{{medication}}</option>
+            </select>
+        </div>
+        <app-button (handleClickEvent)="handleSubmitForm()"  [isDisabled]="patientsForm.invalid" [title]="'submit'"></app-button>
+    </div>
+</form>

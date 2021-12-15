@@ -1,4 +1,4 @@
-const mapDrugsToEntity = (drugs: string): Array<string> => {
+const mapDrugsToEntity = (drugs: string): string[] => {
     return drugs ? drugs.split(',') : [] as string[];
 }
 

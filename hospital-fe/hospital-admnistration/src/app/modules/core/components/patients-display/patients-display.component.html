@@ -1,0 +1,14 @@
+<div>
+    <app-heading [class]="'gallery-heading'" [text]="'Current Patients'"></app-heading>
+    <ng-container *ngIf="medicalConditions">
+        <div *ngIf="medicalConditions.length === 0; else hasPatients">
+            <div class="gallery__no-patients">Please fetch Patients</div>
+        </div>
+        <ng-template #hasPatients>
+            <app-patients-display-table [headers]="headers" [rowData]="medicalConditions"></app-patients-display-table>
+        </ng-template>
+    </ng-container>
+</div>
+
+
+

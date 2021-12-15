@@ -5,12 +5,11 @@
 </div>
 <div class="history__table-container"  *ngIf="history.length > 0">
     <div *ngFor="let data of history; let i = index" >
-
         <div class="history__medication">
             <div>
                 <span>Treatment Iteration - {{data.medicationDate | date:'dd/MM/y HH:mm:ss'}}</span>
             </div>
-            <ng-container *ngIf="data.drugs.length > 0; else noMedicationApplied">
+            <ng-container *ngIf="data.medication.length > 0; else noMedicationApplied">
                 <div>Medication applied - <span class="history__medication--comma" *ngFor="let medication of data.drugs">{{medication | mapMedication}}</span></div>
             </ng-container>
             <ng-template #noMedicationApplied>
@@ -19,12 +18,12 @@
         </div>
         <div class="history__table">
             <ng-container *ngIf="i === 0; else noHeaderTables">
-                <app-table [headers]="historyTableHeaders" [rowData]="data.input"></app-table>
-                <app-table [headers]="historyTableHeaders" [rowData]="data.output"></app-table>
+                <app-patients-display-table [headers]="historyTableHeaders" [rowData]="data.input"></app-patients-display-table>
+                <app-patients-display-table [headers]="historyTableHeaders" [rowData]="data.output"></app-patients-display-table>
             </ng-container>
             <ng-template #noHeaderTables>
-                <app-table [rowData]="data.input"></app-table>
-                <app-table [rowData]="data.output"></app-table>
+                <app-patients-display-table [rowData]="data.input"></app-patients-display-table>
+                <app-patients-display-table [rowData]="data.output"></app-patients-display-table>
             </ng-template>
         </div>
     </div>

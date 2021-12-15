@@ -5,13 +5,7 @@ import {Component, Input, OnInit} from '@angular/core';
   templateUrl: './heading.component.html',
   styleUrls: ['./heading.component.scss']
 })
-export class HeadingComponent implements OnInit {
+export class HeadingComponent {
   @Input() text: string = '';
   @Input() class: string = ''
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

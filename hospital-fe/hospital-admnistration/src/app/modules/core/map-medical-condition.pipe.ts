@@ -1,12 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { MedicalConditions } from "../../Constants";
 
-enum MedicalConditions {
-  F = 'Fever',
-  X = 'Dead',
-  D = 'Diabetes',
-  T = 'Tuberculosis',
-  H = 'Healthy',
-}
 @Pipe({
   name: 'mapMedicalCondition'
 })

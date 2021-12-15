@@ -1,9 +1,26 @@
-<app-mode-options (handleResetClick)="handleReset()" (handleFetchPatientsClick)="handlePatientsClick()" (handleAdministrateDrugsClick)="handleAdministrateDrugsToPatients()" [isDrugsAdministratedButtonDisabled]="isDrugsAdministratedButtonDisabled"></app-mode-options>
-<div class="wrapper">
-    <div style="width: 50%">
-        <app-gallery  [medicalConditions]="medicalConditions"></app-gallery>
+<app-mode-options
+        [isManualModeEnabled]="enableManualMode"
+        (handleResetClick)="handleReset()"
+        (handleFetchPatientsClick)="handlePatientsClick()"
+        (handleAdministrateDrugsClick)="handleAdministrateDrugsToPatients()"
+        [isDrugsAdministratedButtonDisabled]="isDrugsAdministratedButtonDisabled">
+</app-mode-options>
+<div class="home__toggle-container">
+    <app-toggle
+            [checkedText]="'Manual Mode is enabled'"
+            [uncheckedText]="'Manual Mode is disabled'"
+            [isEnabled]="enableManualMode" (handleToggleChange)="isToggleEnabled($event)">
+    </app-toggle>
+</div>
+
+<ng-container *ngIf="enableManualMode">
+    <app-patients-form (handleSubmitFormEvent)="handleSubmitForm($event)"></app-patients-form>
+</ng-container>
+<div class="home__information-wrapper">
+    <div class="home__patients-display-wrapper">
+        <app-patients-display [medicalConditions]="medicalConditions"></app-patients-display>
     </div>
-    <div style="width: 100%">
+    <div class="home__history-wrapper">
         <app-history [history]="history"></app-history>
     </div>
 </div>

@@ -1,14 +1,13 @@
 @import "src/styles";
-
 .button {
    min-width: 15rem;
    align-items: center;
    margin: 2rem;
-   background-color: $hospital-white;
+   background-color: $pink;
    border-radius: 12px;
    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
    box-sizing: border-box;
-   color: black;
+   color: $hospital-white;
    cursor: pointer;
    display: inline-flex;
    font-family: Inter,sans-serif;
@@ -26,8 +25,8 @@
    -webkit-user-select: none;
 
    &--disabled {
-      background-color: $pink;
-      color: white;
+      background-color: $hospital-white;
+      color: $gray-dark;
       cursor: unset;
    }
 

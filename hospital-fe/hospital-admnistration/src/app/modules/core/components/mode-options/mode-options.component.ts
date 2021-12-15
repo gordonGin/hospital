@@ -12,6 +12,7 @@ export class ModeOptionsComponent implements OnInit {
   resetButtonText = 'Reset';
 
   @Input() isDrugsAdministratedButtonDisabled: boolean = false;
+  @Input() isManualModeEnabled: boolean = false;
   @Output() handleFetchPatientsClick = new EventEmitter();
   @Output() handleAdministrateDrugsClick = new EventEmitter();
   @Output() handleResetClick = new EventEmitter();

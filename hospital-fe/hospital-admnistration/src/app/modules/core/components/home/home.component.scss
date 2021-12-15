@@ -1,4 +1,19 @@
-.wrapper {
-  display: flex;
-  flex-direction: column;
+.home {
+  &__toggle-container {
+    margin: 2rem;
+  }
+
+  &__information-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__patients-display-wrapper {
+    width: 50%;
+  }
+
+  &__history-wrapper {
+    width: 100%
+  }
 }
+

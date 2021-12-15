@@ -5,7 +5,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
-export class ButtonComponent implements OnInit {
+export class ButtonComponent {
 
   @Input() title!: string;
   @Input() isDisabled: boolean = false;
@@ -14,12 +14,4 @@ export class ButtonComponent implements OnInit {
   handleClick() {
     this.handleClickEvent.emit();
   }
-
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-
 }

@@ -1,0 +1,12 @@
+<div class="toggle__wrapper">
+    <label class="switch">
+        <input [checked]="isEnabled" (change)="onToggleChange($event)" type="checkbox">
+        <span class="slider round"></span>
+    </label>
+    <div class="toggle__information-text">
+        <ng-container *ngIf="isEnabled === true; else toggleDisabled">
+            <span>{{checkedText}}</span>
+        </ng-container>
+        <ng-template #toggleDisabled><span>{{uncheckedText}}</span></ng-template>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+@import "src/styles";
+.patients-form {
+  &__container {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 35rem 300rem;
+    background-color: $pink-light;
+    padding: 2rem;
+  }
+
+  &__label {
+    @include font2;
+    width: 20rem;
+    margin-right: 1rem;
+  }
+
+  &__input {
+    @include font1;
+    height: 1.5rem;
+    margin-left: 1rem;
+    padding-left: 0.5rem;
+  }
+
+  &__patients-wrapper {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-row-gap: 1rem;
+  }
+
+  &__medical-condition-wrapper {
+    display: grid;
+    grid-template-columns: 15rem 10rem;
+    grid-columns-gap: 1rem;
+  }
+
+  &__medication-wrapper {
+    height: 2rem;
+    display: grid;
+    grid-template-columns: 15rem 10rem;
+  }
+}

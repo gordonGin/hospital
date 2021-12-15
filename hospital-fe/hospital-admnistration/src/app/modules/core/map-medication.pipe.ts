@@ -1,13 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-
-enum Medication {
-    An = 'Antibiotic',
-    As = 'Aspirin',
-    I = 'Insulin',
-    P = 'Paracetamol',
-    
-}
-
+import {Medication} from "../../Constants";
 
 @Pipe({
   name: 'mapMedication'
